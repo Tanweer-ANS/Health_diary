@@ -6,15 +6,15 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export type HealthEntry = {
-  id: string;
-  user_id: string;
-  entry_date: string;
-  mood: string;
-  symptoms: string;
-  notes: string;
-  sleep_hours: number;
-  water_intake: number;
-  exercise_minutes: number;
-  created_at: string;
-  updated_at: string;
+  id: string,
+  user_id: string,
+  entry_date: string,
+  mood: string,
+  symptoms: string,
+  notes: string,
+  sleep_hours: number,
+  water_intake: number,
+  exercise_minutes: number,
+  created_at: string,
+  updated_at: string
 };
