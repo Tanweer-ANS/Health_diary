@@ -104,7 +104,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Stress, anxiety, or burnout — they can quietly shape your life. 
+          Stress, anxiety, or burnout — they can quietly shape your life.
           Health Diary helps you stay aware, reflect daily, and build a balanced lifestyle.
         </motion.p>
 
@@ -233,7 +233,22 @@ export default function Home() {
         <main className="container mx-auto px-4 py-8">
           <ConfigCheck />
           <StatsOverview entries={entries} />
-          <EntryList entries={entries} onEdit={setSelectedEntry} onDelete={() => {}} />
+          <EntryList entries={entries} onEdit={setSelectedEntry} onDelete={() => { }} />
+
+          <Button
+            onClick={() => setIsDialogOpen(true)}
+            className="mt-6 bg-rose-500 hover:bg-rose-600 text-white"
+          >
+            Add New Entry
+          </Button>
+
+          <EntryDialog
+            open={isDialogOpen}
+            onOpenChange={setIsDialogOpen}
+            entry={selectedEntry}
+            onSave={loadEntries}
+          />
+
         </main>
       )}
     </div>
