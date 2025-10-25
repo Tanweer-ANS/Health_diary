@@ -59,6 +59,11 @@ export default function Home() {
           <span className="font-bold text-xl text-slate-800">Health Diary</span>
         </Link>
 
+        <div className="flex items-center gap-6">
+          <Link href="/dashboard" className="text-slate-700 hover:text-rose-600 transition">Dashboard</Link>
+          <Link href="/journal/new" className="text-slate-700 hover:text-rose-600 transition">New Entry</Link>
+        </div>
+
         {user ? (
           <div className="flex items-center gap-4">
             <span className="text-sm text-slate-600">
